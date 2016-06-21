@@ -23,10 +23,10 @@ function goSelPage(params) {
         mc.destroy();
         //提交选择
         if (selType == 1) {
-			_smq.push(['custom','1','02_Middle']);
+			_smq.push(['custom','Cal1','02_Middle']);
             window.location.href = params[0];
         } else if (selType == 2) {
-			_smq.push(['custom','1','03_Late']);
+			_smq.push(['custom','Cal1','03_Late']);
             window.location.href = params[1];
         } else {
             window.location.reload();
@@ -247,14 +247,14 @@ function goAct(e) {
 function goAct2() {
     $('.Act1').fadeOut(500);
     $('.Act2').fadeIn(500);
-	_smq.push(['custom','3','11_Exercise']);
+	_smq.push(['custom','Cal3','11_Exercise']);
 }
 
 function showActRule() {
     $('.popBg').show();
     $('.ActRuleBlock').show();
     $('#scrollbar2').tinyscrollbar();
-	_smq.push(['custom','3','12_Detail']);
+	_smq.push(['custom','Cal3','12_Detail']);
 }
 
 function closeActRule() {
@@ -276,7 +276,7 @@ function goAct3(url) {
 
         }
     })
-	_smq.push(['custom','3','13_Start']);
+	_smq.push(['custom','Cal3','13_Start']);
 }
 
 function goAct4() {
@@ -630,7 +630,7 @@ function act6act() {
 var canSubmit = true;
 
 function submitInfo(url) {
-	_smq.push(['custom','4','15_Submit']);
+	_smq.push(['custom','Cal4','15_Submit']);
     var iName = $.trim($('.infoTxt1').val());
     var iSex = '女';
     var iTel = $.trim($('.infoTxt2').val());
@@ -702,7 +702,7 @@ function showInfo() {
 function showShareNote() {
     $('.popBg').fadeIn(500);
     $('.popShare').fadeIn(500);
-	_smq.push(['custom','4','14_Share']);
+	_smq.push(['custom','Cal4','14_Share']);
 }
 
 function closePopShare() {

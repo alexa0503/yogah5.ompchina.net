@@ -57,8 +57,8 @@ select,input,textarea{font-family:inherit; outline:none;}
 #scrollbar .viewport{ height:580px; overflow:hidden; position:relative; width:405px;}
 #scrollbar .overview{ left:0; list-style:none outside none; margin:0; padding:0; position:absolute; top:0;}
 #scrollbar .scrollbar{ background:none; float:right; position:relative; width:8px;}
-#scrollbar .track{ background:#e26644; height:100%; position:relative; width:8px; border-radius:8px; border-radius:8px;}
-#scrollbar .thumb{ background:#f4c22a; cursor: pointer; left:0; position:absolute; top:0; width:8px; border-radius:8px;}
+#scrollbar .track{ background:#ef70c1; height:100%; position:relative; width:8px; border-radius:8px; border-radius:8px;}
+#scrollbar .thumb{ background:#ffe300; cursor: pointer; left:0; position:absolute; top:0; width:8px; border-radius:8px;}
 #scrollbar .end{ background:none; width:26px; height:17px; position:absolute; left:0; bottom:0; display:none;}
 .ruleClose{ right:0; top:24px;}
 

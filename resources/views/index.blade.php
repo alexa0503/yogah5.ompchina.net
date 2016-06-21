@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div id="touchBlock"></div>
-            <a href="javascript:void(0);" class="abs indexBtn1" onClick="showRule();_smq.push(['custom','1','04_Info']);"><img src="{{asset('assets/images/btn1.png')}}"></a>
+            <a href="javascript:void(0);" class="abs indexBtn1" onClick="showRule();_smq.push(['custom','Cal1','04_Info']);"><img src="{{asset('assets/images/btn1.png')}}"></a>
         </div>
     </div>
 </div>
