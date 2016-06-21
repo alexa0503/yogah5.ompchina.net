@@ -48,7 +48,7 @@
             <img src="{{$wechat_user->head_img}}" class="abs wxImg">
             <div class="abs wxName">{{json_decode($wechat_user->nick_name)}}</div>
             <div class="btnLine">
-				<a href="javascript:void(0);" onClick="showInfo();"><img src="{{asset('assets/images/actBtn4.png')}}"></a>
+				<a href="javascript:void(0);" onClick="showInfo();"><img src="{{asset('assets/images/actBtn7.png')}}"></a>
             	<a href="javascript:void(0);" onClick="showShareNote();"><img src="{{asset('assets/images/actBtn5.png')}}"></a>
             </div>
         </div>
@@ -83,10 +83,10 @@
 </div>
 <div class="infoBlock" style="display:none;">
 	<div class="innerDiv">
-    	<div class="selSex">
+    	<!--<div class="selSex">
         	<div class="selb sel1"></div>
             <div class="selb sel2"></div>
-        </div>
+        </div>-->
     	<input type="text" class="infoTxt infoTxt1" maxlength="20">
         <input type="tel" class="infoTxt infoTxt2" maxlength="11">
         <input type="text" class="infoTxt infoTxt3" maxlength="20">
@@ -107,10 +107,10 @@ var actTime=125;//持续时间
 var nowTime=0;//进行时间
 var actInterval;
 $('document').ready(function(){
-	$('.selb').click(function(){
+	/*$('.selb').click(function(){
 		$('.selb').removeClass('selOn');
 		$(this).addClass('selOn');
-		});
+		});*/
 });
 </script>
 @endsection

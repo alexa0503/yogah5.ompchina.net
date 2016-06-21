@@ -23,8 +23,10 @@ function goSelPage(params) {
         mc.destroy();
         //提交选择
         if (selType == 1) {
+			_smq.push(['custom','1','02_Middle']);
             window.location.href = params[0];
         } else if (selType == 2) {
+			_smq.push(['custom','1','03_Late']);
             window.location.href = params[1];
         } else {
             window.location.reload();
@@ -245,12 +247,14 @@ function goAct(e) {
 function goAct2() {
     $('.Act1').fadeOut(500);
     $('.Act2').fadeIn(500);
+	_smq.push(['custom','3','11_Exercise']);
 }
 
 function showActRule() {
     $('.popBg').show();
     $('.ActRuleBlock').show();
     $('#scrollbar2').tinyscrollbar();
+	_smq.push(['custom','3','12_Detail']);
 }
 
 function closeActRule() {
@@ -261,6 +265,7 @@ function closeActRule() {
 function goAct3() {
     $('.Act2').fadeOut(500);
     $('.Act3').fadeIn(500);
+	_smq.push(['custom','3','13_Start']);
 }
 
 function goAct4() {
@@ -364,6 +369,12 @@ function act2act() {
         $('.actImg').hide();
         $('.actImg2').show();
     }
+	if(nowTime==59||nowTime==119||nowTime==175){
+		$('.act2Img3Bg').addClass('act2Img3BgAct').show();
+		}
+	if(nowTime==65||nowTime==125){
+		$('.act2Img3Bg').hide().removeClass('act2Img3BgAct');
+		}
     var mm = parseInt(nowTime / 60);
     var ss = nowTime % 60;
     if (mm < 10) {
@@ -609,16 +620,9 @@ function act6act() {
 var canSubmit = true;
 
 function submitInfo(url) {
+	_smq.push(['custom','4','15_Submit']);
     var iName = $.trim($('.infoTxt1').val());
-    var iSex;
-    var ibS = $('.selb').index($('.selOn'));
-    if (ibS == 0) {
-        iSex = '男';
-    } else if (ibS == 1) {
-        iSex = '女';
-    } else {
-        iSex = '';
-    }
+    var iSex = '女';
     var iTel = $.trim($('.infoTxt2').val());
     var iCity = $.trim($('.infoTxt3').val());
     var iAddress = $.trim($('.infoArea').val());
@@ -628,10 +632,10 @@ function submitInfo(url) {
         alert('请输入姓名');
         return false;
     }
-    if (iSex == '') {
+    /*if (iSex == '') {
         alert('请选择性别');
         return false;
-    }
+    }*/
     if (iTel == '' || !pattern.test(iTel)) {
         alert('请输入正确的手机号码');
         return false;
@@ -688,6 +692,7 @@ function showInfo() {
 function showShareNote() {
     $('.popBg').fadeIn(500);
     $('.popShare').fadeIn(500);
+	_smq.push(['custom','4','14_Share']);
 }
 
 function closePopShare() {
@@ -712,3 +717,4 @@ function bgmCon() {
         $('.bgm1').show();
     }
 }
+

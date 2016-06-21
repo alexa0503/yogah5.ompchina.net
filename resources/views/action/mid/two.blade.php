@@ -30,6 +30,7 @@
                 	<img src="{{asset('assets/images/act2A2.png')}}" class="actImg actImg2" style="display:none;">
                 </div>
             </div>
+            <div class="act2Img3Bg bgImg" style="display:none;"></div>
             <div class="time1">00:00</div>
             <div class="time2">03:00</div>
             <div class="timeBar">
@@ -46,6 +47,7 @@
             <img src="{{$wechat_user->head_img}}" class="abs wxImg">
             <div class="abs wxName">{{json_decode($wechat_user->nick_name)}}</div>
             <div class="btnLine">
+            	<a href="javascript:void(0);"><img src="{{asset('assets/images/actBtn4.png')}}"></a>
             	<a href="javascript:void(0);" onClick="showShareNote();"><img src="{{asset('assets/images/actBtn5.png')}}"></a>
             </div>
         </div>
@@ -87,7 +89,7 @@
 @section('scripts')
 <script>
 wxData.DESC = '我和胎宝宝一起解锁了主题2孕动插画，好孕之路更进一步。';
-var actTime=125;//持续时间
+var actTime=180;//持续时间
 var nowTime=0;//进行时间
 var actInterval;
 $('document').ready(function(){

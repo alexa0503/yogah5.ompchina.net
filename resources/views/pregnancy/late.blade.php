@@ -6,7 +6,7 @@
 <div class="wrapper">
 	<div class="page page3">
     	<div class="innerDiv">
-        	<div class="abs btn4" onClick="goAct(4);">
+        	<div class="abs btn4" onClick="goAct(4);_smq.push(['custom','2','05_Persist']);">
             	<div class="innerDiv">
                 	<img src="{{asset('assets/images/bBtn11.png')}}" class="abs abTop1 abTop1Act">
                     <div class="manAout">
@@ -18,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="abs btn5" onClick="goAct(5);">
+            <div class="abs btn5" onClick="goAct(5);_smq.push(['custom','2','06_Nutrition']);">
             	<div class="innerDiv">
                 	<img src="{{asset('assets/images/bBtn21.png')}}" class="abs abTop2">
                     <div class="manBout">
@@ -30,7 +30,7 @@
                 </div>
             </div>
 
-            <div class="abs btn6" onClick="goAct(6);">
+            <div class="abs btn6" onClick="goAct(6);_smq.push(['custom','2','07_Graduate']);">
             	<div class="innerDiv">
                 	<img src="{{asset('assets/images/bBtn31.png')}}" class="abs abTop3">
                     <div class="manCout">

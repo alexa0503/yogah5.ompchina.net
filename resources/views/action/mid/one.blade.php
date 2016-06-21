@@ -47,7 +47,8 @@
             <img src="{{$wechat_user->head_img}}" class="abs wxImg">
             <div class="abs wxName">{{json_decode($wechat_user->nick_name)}}</div>
             <div class="btnLine">
-            	<a href="javascript:void(0);" onClick="showShareNote();"><img src="{{asset('assets/images/actBtn5.png')}}"></a>
+            	<a href="javascript:void(0);"><img src="{{asset('assets/images/actBtn4.png')}}"></a>
+                <a href="javascript:void(0);" onClick="showShareNote();"><img src="{{asset('assets/images/actBtn5.png')}}"></a>
             </div>
         </div>
     </div>

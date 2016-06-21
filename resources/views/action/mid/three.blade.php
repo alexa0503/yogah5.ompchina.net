@@ -47,9 +47,10 @@
             <img src="{{$wechat_user->head_img}}" class="abs wxImg">
             <div class="abs wxName">{{json_decode($wechat_user->nick_name)}}</div>
             <div class="btnLine">
-            	<a href="javascript:void(0);" onClick="showInfo();"><img src="{{asset('assets/images/actBtn4.png')}}"></a>
-            	<a href="javascript:void(0);" onClick="showShareNote();"><img src="{{asset('assets/images/actBtn5.png')}}"></a>
+            	<a href="javascript:void(0);" style="margin-right:80px;"><img src="{{asset('assets/images/actBtn4.png')}}"></a>
+            	<a href="javascript:void(0);" style="margin-left:80px;" onClick="showShareNote();"><img src="{{asset('assets/images/actBtn5.png')}}"></a>
             </div>
+            <a href="javascript:void(0);" class="abs actBtn6" onClick="showInfo();"><img src="{{asset('assets/images/actBtn6.png')}}"></a>
         </div>
     </div>
 </div>
@@ -83,20 +84,20 @@
 <div class="infoBlock" style="display:none;">
 	<div class="innerDiv">
 		@if ($wechat_user->info == null)
-	    	<div class="selSex">
+	    	<!--<div class="selSex">
 	        	<div class="selb sel1"></div>
 	            <div class="selb sel2"></div>
-	        </div>
+	        </div>-->
 	    	<input type="text" class="infoTxt infoTxt1" maxlength="20">
 	        <input type="tel" class="infoTxt infoTxt2" maxlength="11">
 	        <input type="text" class="infoTxt infoTxt3" maxlength="20">
 	        <textarea class="infoArea" maxlength="40"></textarea>
 	        <a href="javascript:void(0);" class="abs infoBtn1" onClick="submitInfo('{{url("post")}}');"><img src="{{asset('assets/images/infoBtn1.png')}}"></a>
 		@else
-	    	<div class="selSex">
+	    	<!--<div class="selSex">
 	        	<div class="selb sel1"></div>
 	            <div class="selb sel2"></div>
-	        </div>
+	        </div>-->
 	    	<input type="text" class="infoTxt infoTxt1" maxlength="20" disabled="true" value="{{$wechat_user->info->name}}">
 	        <input type="tel" class="infoTxt infoTxt2" maxlength="11" disabled="true" value="{{$wechat_user->info->mobile}}">
 	        <input type="text" class="infoTxt infoTxt3" maxlength="20" disabled="true" value="{{$wechat_user->info->district}}">
@@ -118,10 +119,10 @@ var actTime=185;//持续时间
 var nowTime=0;//进行时间
 var actInterval;
 $('document').ready(function(){
-	$('.selb').click(function(){
+	/*$('.selb').click(function(){
 		$('.selb').removeClass('selOn');
 		$(this).addClass('selOn');
-		});
+		});*/
 	});
 </script>
 @endsection
