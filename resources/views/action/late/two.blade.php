@@ -15,7 +15,7 @@
         	<div class="act5Img2 bgImg"></div>
             <div class="abs flower"></div>
             <a href="javascript:void(0);" class="abs actRule" onClick="showActRule();"><img src="{{asset('assets/images/space.gif')}}" width="158" height="26"></a>
-            <a href="javascript:void(0);" class="abs actBtn2" onClick="goAct3();"><img src="{{asset('assets/images/actBtn2.png')}}"></a>
+            <a href="javascript:void(0);" class="abs actBtn2" onClick="goAct3('{{url("unlock")}}');"><img src="{{asset('assets/images/actBtn2.png')}}"></a>
         </div>
     </div>
 
@@ -46,7 +46,7 @@
             <img src="{{$wechat_user->head_img}}" class="abs wxImg">
             <div class="abs wxName">{{json_decode($wechat_user->nick_name)}}</div>
             <div class="btnLine">
-            	<a href="javascript:void(0);"><img src="{{asset('assets/images/actBtn4.png')}}"></a>
+            	<a href="{{url('action/3')}}"><img src="{{asset('assets/images/actBtn4.png')}}"></a>
             	<a href="javascript:void(0);" onClick="showShareNote();"><img src="{{asset('assets/images/actBtn5.png')}}"></a>
             </div>
         </div>

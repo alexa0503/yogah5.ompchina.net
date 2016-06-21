@@ -262,17 +262,27 @@ function closeActRule() {
     $('.ActRuleBlock').fadeOut(500);
 }
 
-function goAct3() {
+function goAct3(url) {
     $('.Act2').fadeOut(500);
     $('.Act3').fadeIn(500);
+    var data = $('#unlockForm').serializeArray();
+    $.ajax(url,{
+        type: 'post',
+        data: data,
+        success: function(json){
+
+        },
+        error: function(){
+
+        }
+    })
 	_smq.push(['custom','3','13_Start']);
 }
 
 function goAct4() {
     $('.Act3').fadeOut(500);
     $('.Act4').fadeIn(500);
-    wxShare(true);
-    //$('#unlockForm').submit();
+    wxShare();
 }
 
 
@@ -717,4 +727,3 @@ function bgmCon() {
         $('.bgm1').show();
     }
 }
-

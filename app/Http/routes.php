@@ -12,35 +12,38 @@ Route::any('/wechat', 'WechatController@serve');
 Route::get('/', 'HomeController@index');
 Route::get('pregnancy/{term}', 'HomeController@pregnancy')->where('term', 'mid|late');
 Route::get('action/{id}', 'HomeController@action')->where('id', '[1-3]');
-Route::post('unlock', 'HomeController@unlock');
+Route::any('unlock', 'HomeController@unlock');
 Route::post('post', 'HomeController@post');
-Route::get('logout',function(){
-    Request::session()->set('wechat.openid',null);
+Route::get('logout', function () {
+    Request::session()->set('wechat.openid', null);
+
     return redirect('/');
 });
-Route::get('login',function(){
-    Request::session()->set('wechat.openid','obz_jjhqgaFVI0W7QuR31W26Q68o');
+Route::get('login', function () {
+    Request::session()->set('wechat.openid', 'obz_jjhqgaFVI0W7QuR31W26Q68o');
+
     return redirect('/');
 });
-Route::get('/wx/share', function(){
+Route::get('/wx/share', function () {
     $url = urldecode(Request::get('url'));
     $timestamp = time();
     $api_key = env('WECHAT_API_KEY');
     $sig = md5($api_key.env('WECHAT_API_SECRET').$timestamp);
     $params = [
-        'apiKey'=> $api_key,
-        'timestamp'=> $timestamp,
-        'sig'=> $sig,
+        'apiKey' => $api_key,
+        'timestamp' => $timestamp,
+        'sig' => $sig,
         'a' => 'Base',
         'm' => 'getJsApiTicket',
         'type' => 'jsapi',
     ];
-    $api_url = "http://api.socialjia.com/index.php?".http_build_query($params);
+    $api_url = 'http://api.socialjia.com/index.php?'.http_build_query($params);
     $response = json_decode(App\Helper\HttpClient::get($api_url));
     $jsapi_ticket = $response->data;
     $app_id = env('WECHAT_API_ID');
-    $jssdk = new App\Helper\Jssdk($jsapi_ticket,$app_id);
+    $jssdk = new App\Helper\Jssdk($jsapi_ticket, $app_id);
     $sign_package = $jssdk->getSignPackage($url);
+
     return json_encode($sign_package);
     /*
     $options = [
@@ -77,7 +80,7 @@ Route::get('cms/login', 'Auth\AuthController@getLogin');
 Route::post('cms/login', 'Auth\AuthController@postLogin');
 Route::get('cms/logout', 'Auth\AuthController@logout');
 //屏蔽注册路由
-Route::any('/register', function(){
+Route::any('/register', function () {
 
 });
 //Route::get('/register', 'Auth\AuthController@getRegister');
@@ -102,13 +105,14 @@ Route::any('/wechat/auth', 'WechatController@auth');
 Route::any('/wechat/callback', 'WechatController@callback');
 
 //初始化后台帐号
-Route::get('cms/account/init', function(){
-    if( 0 == \App\User::count()){
+Route::get('cms/account/init', function () {
+    if (0 == \App\User::count()) {
         $user = new \App\User();
         $user->name = 'admin';
         $user->email = 'admin@admin.com';
         $user->password = bcrypt('admin123');
         $user->save();
     }
+
     return redirect('/cms');
 });

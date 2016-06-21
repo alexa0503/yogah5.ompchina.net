@@ -61,10 +61,7 @@
             imgUrl: wxData.imgUrl,
             link: wxData.link,
             success:function(){
-                if(unlock){
-                    $('#unlockForm').submit();
-                    //location.href='{{url("unlock")}}';
-                }
+                
             }
         });
         DATAForWeixin.setAppMessage({
@@ -73,10 +70,7 @@
             desc: wxData.desc,
             link: wxData.link,
             success:function(){
-                if(unlock){
-                    $('#unlockForm').submit();
-                    //location.href='{{url("unlock")}}';
-                }
+
             }
         });
         DATAForWeixin.setQQ({
@@ -96,7 +90,7 @@
     wxShare();
 
     </script>
-    
+
 <script>!(function(a,b,c,d,e,f){var g="",h=a.sessionStorage,i="__admaster_ta_param__",j="tmDataLayer"!==d?"&dl="+d:"";
 if(a[f]={},a[d]=a[d]||[],a[d].push({startTime:+new Date,event:"tm.js"}),h){var k=a.location.search,
 l=new RegExp("[?&]"+i+"=(.*?)(&|#|$)").exec(k)||[];l[1]&&h.setItem(i,l[1]),l=h.getItem(i),
