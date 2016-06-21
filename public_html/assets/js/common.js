@@ -699,6 +699,11 @@ function showInfo() {
     $('.infoBlock').fadeIn(500);
 }
 
+function closeInfo(){
+	$('.popBg').fadeOut(500);
+    $('.infoBlock').fadeOut(500);
+	}
+
 function showShareNote() {
     $('.popBg').fadeIn(500);
     $('.popShare').fadeIn(500);

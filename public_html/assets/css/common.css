@@ -214,6 +214,7 @@ select,input,textarea{font-family:inherit; outline:none;}
 .selOn{ background-position:-21px 8px;}
 .infoBtn1{ left:133px; top:596px;}
 .popShare{ position:fixed; top:0; left:50%; margin-left:-320px;}
+.infoCloseBtn{ left:404px; top:78px;}
 
 .bmgBtn{ position:fixed; top:20px; right:20px;}
 .bmgOn{
