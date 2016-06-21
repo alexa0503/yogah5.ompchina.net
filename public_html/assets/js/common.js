@@ -575,7 +575,7 @@ function act6act() {
     nowTime++;
     if (nowTime >= actTime) {
         clearInterval(actInterval);
-        //goAct4();
+        goAct4();
         return false;
     }
     if (nowTime < 60 && nowTime % 10 == 1) {
