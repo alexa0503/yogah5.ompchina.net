@@ -103,6 +103,8 @@
 	        <input type="text" class="infoTxt infoTxt3" maxlength="20" disabled="true" value="{{$wechat_user->info->district}}">
 	        <textarea class="infoArea" maxlength="40" disabled="true">{{$wechat_user->info->address}}</textarea>
 		@endif
+        
+        <a href="javascript:void(0);" class="abs infoCloseBtn" onClick="closeInfo();"><img src="{{asset('assets/images/infoCloseBtn.png')}}"></a>
     </div>
 </div>
 <img src="{{asset('assets/images/popShare.png')}}" class="popShare" style="display:none;" onClick="closePopShare();">
