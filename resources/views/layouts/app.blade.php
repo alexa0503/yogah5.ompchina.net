@@ -16,7 +16,7 @@
         wxData.link = '{{url("/")}}';
         wxData.imgUrl = '{{asset(env("WECHAT_SHARE_IMG"))}}';
         //wxData.jsApiList = '';
-        wxData.debug = true;
+        wxData.debug = false;
     </script>
 
     <script src="{{asset('assets/js/jquery-1.9.1.min.js')}}"></script>
@@ -61,7 +61,7 @@
             imgUrl: wxData.imgUrl,
             link: wxData.link,
             success:function(){
-                
+                location.href="{{url('pregnancy/mid')}}";
             }
         });
         DATAForWeixin.setAppMessage({
@@ -70,7 +70,7 @@
             desc: wxData.desc,
             link: wxData.link,
             success:function(){
-
+                location.href="{{url('pregnancy/mid')}}";
             }
         });
         DATAForWeixin.setQQ({
