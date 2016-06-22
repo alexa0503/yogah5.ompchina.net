@@ -23,10 +23,10 @@ function goSelPage(params) {
         mc.destroy();
         //提交选择
         if (selType == 1) {
-			_smq.push(['custom','Cal1','02_Middle']);
+			_smq.push(['custom','1','02_Middle']);
             window.location.href = params[0];
         } else if (selType == 2) {
-			_smq.push(['custom','Cal1','03_Late']);
+			_smq.push(['custom','1','03_Late']);
             window.location.href = params[1];
         } else {
             window.location.reload();
@@ -295,7 +295,7 @@ function act1act() {
     nowTime++;
     if (nowTime >= actTime) {
         clearInterval(actInterval);
-        wxData.desc = '我和胎宝宝一起解锁了主题2孕动插画，好孕之路更进一步。';
+            wxData.desc = '我和胎宝宝一起解锁了主题2孕动插画，好孕之路更进一步。';
         goAct4();
         return false;
     }
@@ -374,11 +374,11 @@ function act2act() {
     nowTime++;
     if (nowTime >= actTime) {
         clearInterval(actInterval);
-        wxData.desc = '我和胎宝宝一起解锁了主题3孕动插画，好孕之路更进一步。';
+            wxData.desc = '我和胎宝宝一起解锁了主题3孕动插画，好孕之路更进一步。';
         goAct4();
         return false;
     }
-    if (nowTime==3){
+	if (nowTime==3){
 		$('.actNImg1').fadeIn(1000);
 		}
     if (nowTime == 6) {
@@ -387,16 +387,52 @@ function act2act() {
 		$('.actNImg1').fadeOut(1000);
     }
 	
-	if(nowTime==59){
+	if(nowTime==21){
 		$('.actNImg2').fadeIn(1000);
 		}
-	if(nowTime==65){
+	if(nowTime==27){
 		$('.actNImg2').fadeOut(1000);
 		}
-	if(nowTime==119){
+	if(nowTime==42){
 		$('.actNImg3').fadeIn(1000);
 		}
-	if(nowTime==125){
+	if(nowTime==48){
+		$('.actNImg3').fadeOut(1000);
+		}
+	if(nowTime==63){
+		$('.actNImg2').fadeIn(1000);
+		}
+	if(nowTime==69){
+		$('.actNImg2').fadeOut(1000);
+		}
+	if(nowTime==84){
+		$('.actNImg3').fadeIn(1000);
+		}
+	if(nowTime==90){
+		$('.actNImg3').fadeOut(1000);
+		}
+	if(nowTime==105){
+		$('.actNImg2').fadeIn(1000);
+		}
+	if(nowTime==111){
+		$('.actNImg2').fadeOut(1000);
+		}
+	if(nowTime==126){
+		$('.actNImg3').fadeIn(1000);
+		}
+	if(nowTime==132){
+		$('.actNImg3').fadeOut(1000);
+		}
+	if(nowTime==147){
+		$('.actNImg2').fadeIn(1000);
+		}
+	if(nowTime==153){
+		$('.actNImg2').fadeOut(1000);
+		}
+	if(nowTime==168){
+		$('.actNImg3').fadeIn(1000);
+		}
+	if(nowTime==174){
 		$('.actNImg3').fadeOut(1000);
 		}
 	
@@ -436,10 +472,16 @@ function act3act() {
         $('.actImg').hide();
         $('.actImg3').show();
     }
-	if (nowTime==54){
+	if (nowTime==19){
 		$('.actNImg1').fadeIn(1000);
 		}
-	if (nowTime==60){
+	if (nowTime==25){
+		$('.actNImg1').fadeOut(1000);
+		}
+	if (nowTime==44){
+		$('.actNImg1').fadeIn(1000);
+		}
+	if (nowTime==50){
 		$('.actNImg1').fadeOut(1000);
 		}
     if (nowTime == 90) {
@@ -471,10 +513,16 @@ function act3act() {
         $('.actImg').hide();
         $('.actImg3').show();
     }
-	if (nowTime==144){
+	if (nowTime==114){
 		$('.actNImg1').fadeIn(1000);
 		}
-	if (nowTime==150){
+	if (nowTime==120){
+		$('.actNImg1').fadeOut(1000);
+		}
+	if (nowTime==139){
+		$('.actNImg1').fadeIn(1000);
+		}
+	if (nowTime==146){
 		$('.actNImg1').fadeOut(1000);
 		}
     var mm = parseInt(nowTime / 60);
@@ -516,7 +564,7 @@ function act4act() {
 	if (nowTime==44){
 		$('.actNImg1').fadeIn(1000);
 		}
-	if (nowTime==50){
+	if (nowTime==58){
 		$('.actNImg1').fadeOut(1000);
 		}
     if (nowTime == 80) {
@@ -548,10 +596,10 @@ function act4act() {
         $('.actImg').hide();
         $('.actImg6').show();
     }
-	if (nowTime==129){
+	if (nowTime==120){
 		$('.actNImg2').fadeIn(1000);
 		}
-	if (nowTime==135){
+	if (nowTime==130){
 		$('.actNImg2').fadeOut(1000);
 		}
     var mm = parseInt(nowTime / 60);

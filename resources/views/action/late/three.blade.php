@@ -6,7 +6,7 @@
 	<div class="page Act1">
     	<div class="innerDiv">
         	<div class="act6Img1 bgImg"></div>
-            <a href="javascript:void(0);" class="abs actBtn1" onClick="goAct2();_smq.push(['custom','Cal7','071_Exercise']);"><img src="{{asset('assets/images/actBtn1.png')}}"></a>
+            <a href="javascript:void(0);" class="abs actBtn1" onClick="goAct2();_smq.push(['custom','7','071_Exercise']);"><img src="{{asset('assets/images/actBtn1.png')}}"></a>
         </div>
     </div>
 
@@ -14,8 +14,8 @@
     	<div class="innerDiv">
         	<div class="act6Img2 bgImg"></div>
             <div class="abs flower"></div>
-            <a href="javascript:void(0);" class="abs actRule" onClick="showActRule();_smq.push(['custom','Cal7','072_Detail']);"><img src="{{asset('assets/images/space.gif')}}" width="158" height="26"></a>
-            <a href="javascript:void(0);" class="abs actBtn2" onClick="goAct3('{{url("unlock")}}');_smq.push(['custom','Cal7','073_Start']);"><img src="{{asset('assets/images/actBtn2.png')}}"></a>
+            <a href="javascript:void(0);" class="abs actRule" onClick="showActRule();_smq.push(['custom','7','072_Detail']);"><img src="{{asset('assets/images/space.gif')}}" width="158" height="26"></a>
+            <a href="javascript:void(0);" class="abs actBtn2" onClick="goAct3('{{url("unlock")}}');_smq.push(['custom','7','073_Start']);"><img src="{{asset('assets/images/actBtn2.png')}}"></a>
         </div>
     </div>
 
@@ -49,7 +49,7 @@
             <div class="abs wxName">{{json_decode($wechat_user->nick_name)}}</div>
             <div class="btnLine">
 				<a href="javascript:void(0);" onClick="showInfo();"><img src="{{asset('assets/images/actBtn7.png')}}"></a>
-            	<a href="javascript:void(0);" onClick="showShareNote();_smq.push(['custom','Cal7','074_Share']);"><img src="{{asset('assets/images/actBtn5.png')}}"></a>
+            	<a href="javascript:void(0);" onClick="showShareNote();_smq.push(['custom','7','074_Share']);"><img src="{{asset('assets/images/actBtn5.png')}}"></a>
             </div>
         </div>
     </div>
@@ -92,7 +92,7 @@
 	        <input type="tel" class="infoTxt infoTxt2" maxlength="11">
 	        <input type="text" class="infoTxt infoTxt3" maxlength="20">
 	        <textarea class="infoArea" maxlength="40"></textarea>
-	        <a href="javascript:void(0);" class="abs infoBtn1" onClick="_smq.push(['custom','Cal7','075_Submit']);submitInfo('{{url("post")}}');"><img src="{{asset('assets/images/infoBtn1.png')}}"></a>
+	        <a href="javascript:void(0);" class="abs infoBtn1" onClick="_smq.push(['custom','7','075_Submit']);submitInfo('{{url("post")}}');"><img src="{{asset('assets/images/infoBtn1.png')}}"></a>
 		@else
 	    	<!--<div class="selSex">
 	        	<div class="selb sel1"></div>
@@ -103,9 +103,7 @@
 	        <input type="text" class="infoTxt infoTxt3" maxlength="20" disabled="true" value="{{$wechat_user->info->district}}">
 	        <textarea class="infoArea" maxlength="40" disabled="true">{{$wechat_user->info->address}}</textarea>
 		@endif
-        
         <a href="javascript:void(0);" class="abs infoCloseBtn" onClick="closeInfo();"><img src="{{asset('assets/images/infoCloseBtn.png')}}"></a>
-
     </div>
 </div>
 <img src="{{asset('assets/images/popShare.png')}}" class="popShare" style="display:none;" onClick="closePopShare();">
