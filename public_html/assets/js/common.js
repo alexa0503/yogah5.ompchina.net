@@ -298,7 +298,7 @@ function act1act() {
     nowTime++;
     if (nowTime >= actTime) {
         clearInterval(actInterval);
-        wxData.DESC = '我和胎宝宝一起解锁了主题2孕动插画，好孕之路更进一步。';
+        wxData.desc = '我和胎宝宝一起解锁了主题2孕动插画，好孕之路更进一步。';
         goAct4();
         return false;
     }
@@ -371,7 +371,7 @@ function act2act() {
     nowTime++;
     if (nowTime >= actTime) {
         clearInterval(actInterval);
-        wxData.DESC = '我和胎宝宝一起解锁了主题3孕动插画，好孕之路更进一步。';
+        wxData.desc = '我和胎宝宝一起解锁了主题3孕动插画，好孕之路更进一步。';
         goAct4();
         return false;
     }
@@ -409,7 +409,7 @@ function act3act() {
     nowTime++;
     if (nowTime >= actTime) {
         clearInterval(actInterval);
-        wxData.DESC = '我和胎宝宝一起解锁了主题4孕动插画，好孕之路更进一步。';
+        wxData.desc = '我和胎宝宝一起解锁了主题4孕动插画，好孕之路更进一步。';
         goAct4();
         return false;
     }
@@ -474,7 +474,7 @@ function act4act() {
     nowTime++;
     if (nowTime >= actTime) {
         clearInterval(actInterval);
-        wxData.DESC = '我和胎宝宝一起解锁了主题5孕动插画，好孕之路更进一步。';
+        wxData.desc = '我和胎宝宝一起解锁了主题5孕动插画，好孕之路更进一步。';
         goAct4();
         return false;
     }
@@ -539,7 +539,7 @@ function act5act() {
     nowTime++;
     if (nowTime >= actTime) {
         clearInterval(actInterval);
-        wxData.DESC = '我和胎宝宝一起解锁了主题6孕动插画，好孕之路更进一步。';
+        wxData.desc = '我和胎宝宝一起解锁了主题6孕动插画，好孕之路更进一步。';
         goAct4();
         return false;
     }

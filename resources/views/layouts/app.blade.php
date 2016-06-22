@@ -16,7 +16,7 @@
         wxData.link = '{{url("/")}}';
         wxData.imgUrl = '{{asset(env("WECHAT_SHARE_IMG"))}}';
         //wxData.jsApiList = '';
-        wxData.debug = false;
+        wxData.debug = true;
     </script>
 
     <script src="{{asset('assets/js/jquery-1.9.1.min.js')}}"></script>
