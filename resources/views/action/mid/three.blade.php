@@ -42,7 +42,7 @@
             	<div class="timeGoBar"></div>
             </div>
             <a href="javascript:void(0);" class="abs actBtn3" onClick="startAct3();"><img src="{{asset('assets/images/actBtn3.png')}}"></a>
-            <div class="restTime" style="display:none;">5</div>
+            <div class="restTime" style="display:none; height:112px;">5</div>
         </div>
     </div>
 
