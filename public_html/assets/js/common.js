@@ -575,7 +575,7 @@ function act6act() {
     nowTime++;
     if (nowTime >= actTime) {
         clearInterval(actInterval);
-        //goAct4();
+        goAct4();
         return false;
     }
     if (nowTime < 60 && nowTime % 10 == 1) {
@@ -698,6 +698,11 @@ function showInfo() {
     $('.popBg').fadeIn(500);
     $('.infoBlock').fadeIn(500);
 }
+
+function closeInfo(){
+	$('.popBg').fadeOut(500);
+    $('.infoBlock').fadeOut(500);
+	}
 
 function showShareNote() {
     $('.popBg').fadeIn(500);
