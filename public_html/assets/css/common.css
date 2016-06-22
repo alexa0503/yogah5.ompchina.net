@@ -146,7 +146,7 @@ select,input,textarea{font-family:inherit; outline:none;}
 .time2{ color:#f47957; font-size:18px; text-align:left; position:absolute; width:74px; height:20px; line-height:20px; left:565px; top:940px;}
 .timeBar{ width:486px; height:10px; position:absolute; left:75px; top:945px;}
 .actBtn3{ left:275px; top:405px;}
-.restTime{ background:url(../images/actTime.png) 0 0 no-repeat; width:145px; height:112px; padding-top:27px; position:absolute; left:265px; top:345px; text-align:center; font-size:55px; line-height:112px; color:#FFF;}
+.restTime{ background:url(../images/actTime.png) 0 0 no-repeat; width:145px; height:182px; padding-top:27px; position:absolute; left:265px; top:345px; text-align:center; font-size:55px; line-height:112px; color:#FFF;}
 .timeGoBar{ height:10px; background:#e64e3d; border-radius:5px; width:0;}
 .ac1{ left:300px; top:250px; opacity:0.5;
 -webkit-animation:ac1 23s 0s linear both infinite;}
