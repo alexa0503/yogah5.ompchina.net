@@ -24,6 +24,11 @@
         	<div class="act3Img3 bgImg"></div>
             <img src="{{asset('assets/images/page1Img4.png')}}" class="abs ac1">
             <img src="{{asset('assets/images/page1Img4.png')}}" width="70" class="abs ac2">
+            <div class="bgImg">
+            	<div class="innerDiv">
+                	<img src="{{asset('assets/images/act3N1.png')}}" class="actNImg actNImg1" style="display:none;">
+                </div>
+            </div>
         	<div class="bgImg">
             	<div class="innerDiv">
                 	<img src="{{asset('assets/images/act3A1.png')}}" class="actImg actImg1">
