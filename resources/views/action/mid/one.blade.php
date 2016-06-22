@@ -6,7 +6,7 @@
 	<div class="page Act1">
     	<div class="innerDiv">
         	<div class="act1Img1 bgImg"></div>
-            <a href="javascript:void(0);" class="abs actBtn1" onClick="goAct2();"><img src="{{asset('assets/images/actBtn1.png')}}"></a>
+            <a href="javascript:void(0);" class="abs actBtn1" onClick="goAct2();_smq.push(['custom','8','081_Exercise']);"><img src="{{asset('assets/images/actBtn1.png')}}"></a>
         </div>
     </div>
 
@@ -14,8 +14,8 @@
     	<div class="innerDiv">
         	<div class="act1Img2 bgImg"></div>
             <div class="abs flower"></div>
-            <a href="javascript:void(0);" class="abs actRule" onClick="showActRule();"><img src="{{asset('assets/images/space.gif')}}" width="158" height="26"></a>
-            <a href="javascript:void(0);" class="abs actBtn2" onClick="goAct3('{{url("unlock")}}');"><img src="{{asset('assets/images/actBtn2.png')}}"></a>
+            <a href="javascript:void(0);" class="abs actRule" onClick="showActRule();_smq.push(['custom','8','082_Detail']);"><img src="{{asset('assets/images/space.gif')}}" width="158" height="26"></a>
+            <a href="javascript:void(0);" class="abs actBtn2" onClick="goAct3('{{url("unlock")}}');_smq.push(['custom','8','083_Start']);"><img src="{{asset('assets/images/actBtn2.png')}}"></a>
         </div>
     </div>
 
@@ -48,7 +48,7 @@
             <div class="abs wxName">{{json_decode($wechat_user->nick_name)}}</div>
             <div class="btnLine">
             	<a href="{{url('action/2')}}"><img src="{{asset('assets/images/actBtn4.png')}}"></a>
-                <a href="javascript:void(0);" onClick="showShareNote();"><img src="{{asset('assets/images/actBtn5.png')}}"></a>
+                <a href="javascript:void(0);" onClick="showShareNote();"_smq.push(['custom','8','084_Share']);><img src="{{asset('assets/images/actBtn5.png')}}"></a>
             </div>
         </div>
     </div>

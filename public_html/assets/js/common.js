@@ -247,14 +247,12 @@ function goAct(e) {
 function goAct2() {
     $('.Act1').fadeOut(500);
     $('.Act2').fadeIn(500);
-	_smq.push(['custom','3','11_Exercise']);
 }
 
 function showActRule() {
     $('.popBg').show();
     $('.ActRuleBlock').show();
     $('#scrollbar2').tinyscrollbar();
-	_smq.push(['custom','3','12_Detail']);
 }
 
 function closeActRule() {
@@ -276,7 +274,6 @@ function goAct3(url) {
 
         }
     })
-	_smq.push(['custom','3','13_Start']);
 }
 
 function goAct4() {
@@ -630,7 +627,6 @@ function act6act() {
 var canSubmit = true;
 
 function submitInfo(url) {
-	_smq.push(['custom','4','15_Submit']);
     var iName = $.trim($('.infoTxt1').val());
     var iSex = '女';
     var iTel = $.trim($('.infoTxt2').val());
@@ -707,7 +703,6 @@ function closeInfo(){
 function showShareNote() {
     $('.popBg').fadeIn(500);
     $('.popShare').fadeIn(500);
-	_smq.push(['custom','4','14_Share']);
 }
 
 function closePopShare() {
