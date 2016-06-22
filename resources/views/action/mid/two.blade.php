@@ -24,13 +24,20 @@
         	<div class="act2Img3 bgImg"></div>
             <img src="{{asset('assets/images/page1Img4.png')}}" class="abs ac1">
             <img src="{{asset('assets/images/page1Img4.png')}}" width="70" class="abs ac2">
+            <div class="bgImg">
+            	<div class="innerDiv">
+                	<img src="{{asset('assets/images/act2N1.png')}}" class="actNImg actNImg1" style="display:none;">
+                    <img src="{{asset('assets/images/act2N2.png')}}" class="actNImg actNImg2" style="display:none;">
+                    <img src="{{asset('assets/images/act2N3.png')}}" class="actNImg actNImg3" style="display:none;">
+                </div>
+            </div>
         	<div class="bgImg">
             	<div class="innerDiv">
                 	<img src="{{asset('assets/images/act2A1.png')}}" class="actImg actImg1">
                 	<img src="{{asset('assets/images/act2A2.png')}}" class="actImg actImg2" style="display:none;">
                 </div>
             </div>
-            <div class="act2Img3Bg bgImg" style="display:none;"></div>
+            <!--<div class="act2Img3Bg bgImg" style="display:none;"></div>-->
             <div class="time1">00:00</div>
             <div class="time2">03:00</div>
             <div class="timeBar">

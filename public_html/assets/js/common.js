@@ -311,6 +311,12 @@ function act1act() {
         $('.actImg').hide();
         $('.actImg1').show();
     }
+	if (nowTime==14||nowTime==29||nowTime==44||nowTime==79||nowTime==94||nowTime==109){
+		$('.actNImg1').fadeIn(1000);
+		}
+	if (nowTime==20||nowTime==35||nowTime==50||nowTime==85||nowTime==100||nowTime==115){
+		$('.actNImg1').fadeOut(1000);
+		}
     if (nowTime == 60) {
         $('.actImg').hide();
         $('.restTime').show();
@@ -372,16 +378,28 @@ function act2act() {
         goAct4();
         return false;
     }
+	if (nowTime==3){
+		$('.actNImg1').fadeIn(1000);
+		}
     if (nowTime == 6) {
         $('.actImg').hide();
         $('.actImg2').show();
+		$('.actNImg1').fadeOut(1000);
     }
-	if(nowTime==59||nowTime==119||nowTime==175){
-		$('.act2Img3Bg').addClass('act2Img3BgAct').show();
+	
+	if(nowTime==59){
+		$('.actNImg2').fadeIn(1000);
 		}
-	if(nowTime==65||nowTime==125){
-		$('.act2Img3Bg').hide().removeClass('act2Img3BgAct');
+	if(nowTime==65){
+		$('.actNImg2').fadeOut(1000);
 		}
+	if(nowTime==119){
+		$('.actNImg3').fadeIn(1000);
+		}
+	if(nowTime==125){
+		$('.actNImg3').fadeOut(1000);
+		}
+	
     var mm = parseInt(nowTime / 60);
     var ss = nowTime % 60;
     if (mm < 10) {
@@ -418,6 +436,12 @@ function act3act() {
         $('.actImg').hide();
         $('.actImg3').show();
     }
+	if (nowTime==54){
+		$('.actNImg1').fadeIn(1000);
+		}
+	if (nowTime==60){
+		$('.actNImg1').fadeOut(1000);
+		}
     if (nowTime == 90) {
         $('.actImg').hide();
         $('.restTime').show();
@@ -447,6 +471,12 @@ function act3act() {
         $('.actImg').hide();
         $('.actImg3').show();
     }
+	if (nowTime==144){
+		$('.actNImg1').fadeIn(1000);
+		}
+	if (nowTime==150){
+		$('.actNImg1').fadeOut(1000);
+		}
     var mm = parseInt(nowTime / 60);
     var ss = nowTime % 60;
     if (mm < 10) {
@@ -483,6 +513,12 @@ function act4act() {
         $('.actImg').hide();
         $('.actImg3').show();
     }
+	if (nowTime==44){
+		$('.actNImg1').fadeIn(1000);
+		}
+	if (nowTime==50){
+		$('.actNImg1').fadeOut(1000);
+		}
     if (nowTime == 80) {
         $('.actImg').hide();
         $('.restTime').show();
@@ -512,6 +548,12 @@ function act4act() {
         $('.actImg').hide();
         $('.actImg6').show();
     }
+	if (nowTime==129){
+		$('.actNImg1').fadeIn(1000);
+		}
+	if (nowTime==135){
+		$('.actNImg1').fadeOut(1000);
+		}
     var mm = parseInt(nowTime / 60);
     var ss = nowTime % 60;
     if (mm < 10) {
