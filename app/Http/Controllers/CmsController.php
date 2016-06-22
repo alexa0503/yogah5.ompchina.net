@@ -78,7 +78,7 @@ class CmsController extends Controller
      */
     public function infos()
     {
-        $infos = \App\Info::paginate(20);
+        $infos = \App\Info::where('name', '!=', null)->paginate(20);
 
         return view('cms/infos', ['infos' => $infos]);
     }
@@ -112,7 +112,7 @@ class CmsController extends Controller
     public function export($table)
     {
         if ($table == 'infos') {
-            $collection = \App\Info::all();
+            $collection = \App\Info::where('name', '!=', null)->all();
             $data = $collection->map(function ($item) {
                 return [
                     json_decode($item->user->nick_name),
