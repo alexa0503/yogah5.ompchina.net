@@ -549,10 +549,10 @@ function act4act() {
         $('.actImg6').show();
     }
 	if (nowTime==129){
-		$('.actNImg1').fadeIn(1000);
+		$('.actNImg2').fadeIn(1000);
 		}
 	if (nowTime==135){
-		$('.actNImg1').fadeOut(1000);
+		$('.actNImg2').fadeOut(1000);
 		}
     var mm = parseInt(nowTime / 60);
     var ss = nowTime % 60;

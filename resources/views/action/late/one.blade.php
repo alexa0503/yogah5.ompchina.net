@@ -27,6 +27,7 @@
             <div class="bgImg">
             	<div class="innerDiv">
                 	<img src="{{asset('assets/images/act4N1.png')}}" class="actNImg actNImg1" style="display:none;">
+                    <img src="{{asset('assets/images/act4N2.png')}}" class="actNImg actNImg2" style="display:none;">
                 </div>
             </div>
         	<div class="bgImg">
