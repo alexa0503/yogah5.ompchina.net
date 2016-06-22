@@ -61,7 +61,9 @@
             imgUrl: wxData.imgUrl,
             link: wxData.link,
             success:function(){
-                location.href="{{url('pregnancy/mid')}}";
+                if(unlock == true){
+                    location.href="{{url('pregnancy/mid')}}";
+                }
             }
         });
         DATAForWeixin.setAppMessage({
@@ -70,7 +72,9 @@
             desc: wxData.desc,
             link: wxData.link,
             success:function(){
-                location.href="{{url('pregnancy/mid')}}";
+                if(unlock == true){
+                    location.href="{{url('pregnancy/mid')}}";
+                }
             }
         });
         DATAForWeixin.setQQ({

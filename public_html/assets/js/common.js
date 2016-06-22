@@ -282,7 +282,7 @@ function goAct3(url) {
 function goAct4() {
     $('.Act3').fadeOut(500);
     $('.Act4').fadeIn(500);
-    wxShare();
+    wxShare(true);
 }
 
 
