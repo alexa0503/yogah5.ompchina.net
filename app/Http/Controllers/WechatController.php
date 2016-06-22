@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Helper;
 use Carbon\Carbon;
@@ -13,7 +12,9 @@ class WechatController extends Controller
     {
         $callback_url = $request->getUriForPath('/wechat/callback');
         //http://call.socialjia.com/Wxapp/weixin_common/oauth2.0/link.php?entid=88&scope=snsapi_userinfo&response_type=code&url=urlencode(url)
-        $url = 'http://call.socialjia.com/Wxapp/weixin_common/oauth2.0/link.php?entid=88&scope=snsapi_userinfo&response_type=code&url='.urlencode($callback_url);
+        //http://call.socialjia.com/Wxapp/weixin_common/oauth2.0/link.php?entid=128&url=urlencode(url)
+        $url = 'http://call.socialjia.com/Wxapp/weixin_common/oauth2.0/link.php?entid=128&scope=snsapi_userinfo&response_type=code&url='.urlencode($callback_url);
+
         return redirect($url);
     }
     public function callback(Request $request)
@@ -23,17 +24,17 @@ class WechatController extends Controller
         $api_key = env('WECHAT_API_KEY');
         $sig = md5($api_key.env('WECHAT_API_SECRET').$timestamp);
         $params = [
-            'apiKey'=> $api_key,
-            'timestamp'=> $timestamp,
-            'sig'=> $sig,
+            'apiKey' => $api_key,
+            'timestamp' => $timestamp,
+            'sig' => $sig,
             'a' => 'userInfo',
             'm' => 'getUserInfoByCode',
             'code' => $code,
         ];
-        $url = "http://api.socialjia.com/index.php?".http_build_query($params);
+        $url = 'http://api.socialjia.com/index.php?'.http_build_query($params);
         $response = json_decode(Helper\HttpClient::get($url));
         if (isset($response->error) && $response->error != 0) {
-            return view('errors/503',['error_msg' => '获取用户信息失败~']);
+            return view('errors/503', ['error_msg' => '获取用户信息失败~']);
         }
         /*
         $wechat_token = $token->access_token;
@@ -45,11 +46,10 @@ class WechatController extends Controller
         */
         $user_data = $response->data;
         $openid = $user_data->openid;
-        $wechat_user = \App\WechatUser::where('open_id',$openid);
-        if($wechat_user->count() > 0){
+        $wechat_user = \App\WechatUser::where('open_id', $openid);
+        if ($wechat_user->count() > 0) {
             $wechat = $wechat_user->first();
-        }
-        else{
+        } else {
             $wechat = new \App\WechatUser();
             $wechat->open_id = $openid;
             $wechat->create_time = Carbon::now();
@@ -65,9 +65,10 @@ class WechatController extends Controller
         $wechat->save();
         $request->session()->set('wechat.openid', $openid);
 
-        if( null != $request->session()->get('wechat.redirect_uri'))
+        if (null != $request->session()->get('wechat.redirect_uri')) {
             return redirect($request->session()->get('wechat.redirect_uri'));
-        else
+        } else {
             return redirect('/');
+        }
     }
 }
